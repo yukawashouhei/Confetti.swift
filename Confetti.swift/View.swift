@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MinimalConfettiView: View {
-    @StateObject private var viewModel = ConfettiViewModel()
+    @State private var viewModel = ConfettiViewModel()
     
     var body: some View {
         GeometryReader { geometry in

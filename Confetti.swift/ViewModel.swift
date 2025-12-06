@@ -6,18 +6,25 @@
 //
 
 import SwiftUI
-import Combine
+import Observation
 
 @MainActor
-class ConfettiViewModel: ObservableObject {
-    @Published var particles: [ConfettiParticle] = []
+@Observable
+class ConfettiViewModel {
+    var particles: [ConfettiParticle] = []
+    
+    @ObservationIgnored
     var animationStartTime: Date?
     
     // 定数設定
+    @ObservationIgnored
     let particleCount = 100
+    
+    @ObservationIgnored
     let animationDuration: TimeInterval = 4.0
     
     // 色のパレット（canvas-confettiのデフォルト色に近い）
+    @ObservationIgnored
     let colors: [Color] = [
         Color(red: 1.0, green: 0.42, blue: 0.42), // 赤
         Color(red: 1.0, green: 0.82, blue: 0.4), // オレンジ
