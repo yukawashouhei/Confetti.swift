@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MinimalConfettiView: View {
+struct ConfettiView: View {
     @StateObject private var viewModel = ConfettiViewModel()
     
     var body: some View {
@@ -110,5 +110,5 @@ struct MinimalConfettiView: View {
 }
 
 #Preview {
-    MinimalConfettiView()
+    ConfettiView()
 }

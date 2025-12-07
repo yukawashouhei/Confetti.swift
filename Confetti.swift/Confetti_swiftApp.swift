@@ -11,7 +11,7 @@ import SwiftUI
 struct Confetti_swiftApp: App {
     var body: some Scene {
         WindowGroup {
-            MinimalConfettiView()
+            ConfettiView()
         }
     }
 }
